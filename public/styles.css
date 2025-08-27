@@ -1,3 +1,12 @@
+/* Global box-sizing reset (with vendor prefixes for compatibility) */
+*,
+*::before,
+*::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
   background: #f8fafc;
   color: #111827;
@@ -7,7 +16,7 @@ body {
 }
 
 .container {
-  background: white;
+  background: #ffffff;
   border-radius: 8px;
   box-shadow: 0 6px 20px rgba(2, 6, 23, 0.06);
   margin: 0 auto;
@@ -26,11 +35,10 @@ label {
 }
 
 input {
-  
+  border: 1px solid #e5e7eb;
   border-radius: 6px;
-
   margin-bottom: 8px;
-
+  padding: 10px;
   width: 100%;
 }
 
@@ -38,14 +46,14 @@ button {
   background: #2563eb;
   border: none;
   border-radius: 6px;
-  color: white;
+  color: #ffffff;
   cursor: pointer;
   margin-right: 8px;
   padding: 10px 14px;
 }
 
 .secondary {
-  background: #ef4444; /* ✅ removed element overqualification */
+  background: #ef4444;
 }
 
 .muted {
@@ -95,4 +103,5 @@ pre {
   overflow: auto;
   padding: 10px;
 }
+
 
