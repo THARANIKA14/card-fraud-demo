@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Credit Card Geo-Fraud Demo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Credit Card Geo-Fraud Demo</h1>
+
+    <form id="checkForm">
+      <label>Card number (demo only)</label>
+      <input id="cardNumber" placeholder="4111 1111 1111 1111" required />
+      <button type="submit">Check Transaction</button>
+      <p class="muted">The app will attempt to get your browser location. If denied, it will use IP-based geolocation (ipapi.co).</p>
+    </form>
+
+    <div id="status" class="status"></div>
+
+    <div id="result" class="result hidden">
+      <h2>Result</h2>
+      <div id="cardInfo"></div>
+      <div id="riskInfo"></div>
+      <div id="details"></div>
+
+      <div class="actions">
+        <button id="btnContinue">Continue</button>
+        <button id="btnReport">Report</button>
+        <button id="btnFreeze">Freeze</button>
+        <button id="btnBlock">Block</button>
+      </div>
+    </div>
+
+    <hr/>
+    <small>This is a demo. Do not use real PAN/CVV here. See README for notes.</small>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
